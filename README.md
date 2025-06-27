@@ -1,21 +1,37 @@
-# Switch2-Mouse
+# **NVNT's Joy-Con 2 Mouse Info Database & Repository**
 
-**NVNT's Joy-Con 2 Mouse Info Database & Repository**
+The purpose of this is for dumping and logging the hardware info (PID, VID etc) of the Nintendo Switch 2 Joy-Con 2, as well as documenting the mouse sensor inside of it. 
 
-For Using Nintendo Switch 2 Joy-Con 2 Mouse Sensors as a Windows Mouse / Input Device and general hardware info dump for the mouse sensor.
+---
 
-**🧠 What is This?**
+## 📚 Table of Contents
+- **Introduction**
+  - [Goals](#goals)
+  - [Status](#status)
 
-Each Joy-Con 2 in the Nintendo Switch 2 features an integrated optical mouse sensor for an alternative input method for supported games. This project explores and utilizes this hardware for utilization on Windows PCs.
+---
 
-**🎯 Goals**
-- Document the Joy-Con 2 Mouse Sensor: Identify and analyze the optical sensor model used in Joy-Con 2 controllers, including resolution, polling rate, PID/VID and communication protocol.
+## How is this possible?
 
-- Dump & Decode Bluetooth Packets: Capture raw Bluetooth packet data sent from Joy-Con 2 devices to reverse-engineer how mouse movement data is transmitted using Nordic Semiconductor nRF Sniffer.
+Utilizing a Nordic nRF52840-based Bluetooth sniffer to capture and analyze connection packets transmitted by the Nintendo Switch 2 Joy-Con 2 controllers to the host device. This process includes identifying hardware-level details such as Product ID (PID), Vendor ID (VID), and other relevant descriptors.
 
-- Enable Mouse Input on Windows: Create a reliable interface to map Joy-Con 2 sensor input to native Windows mouse input, making it usable in real-time.
+For documentation purposes, this repo will also catalog as much detailed sensor information as possible such as LOD, Polling Rate, etc.
 
-**📦 Status**
+A long-term goal is to develop a custom driver that enables the Joy-Con 2 to function as a native mouse input device on Windows, complete with proper initialization sequences and motion reporting.
 
-🚧 Work in progress.
-We are currently analyzing packet data and validating sensor behavior. Contributions and Bluetooth dumps are welcome!
+---
+
+## Goals
+
+- 🔲 Log Joy-Con 2 Mouse Sensor Information (Model, LOD, DPI, etc)
+- 🔲 Dump PID, VID & Other Manufacturing Info
+- 🔲 Dump Handshake / Connection Information (from Nordic 52840 Sniffer)
+- 🔲 Create Driver to use Joy-Con 2 as a mouse on Windows
+
+---
+
+## Status
+
+Work in progress. Currently, evaluating the Sensor Lift Off Distance (LOD) has commenced. 
+
+---
