@@ -13,7 +13,7 @@ The purpose of this is for dumping and logging the hardware info (PID, VID etc) 
 
 ## How is this possible?
 
-Utilizing a Nordic nRF52840-based Bluetooth sniffer to capture and analyze connection packets transmitted by the Nintendo Switch 2 Joy-Con 2 controllers to the host device. This process includes identifying hardware-level details such as Product ID (PID), Vendor ID (VID), and other relevant descriptors.
+Utilizing a Nordic nRF52840-based Bluetooth sniffer to capture and analyze connection packets transmitted by the Nintendo Switch 2 Joy-Con 2 controllers to the host device. This process includes identifying hardware-level details such as Product ID (PID), Vendor ID (VID), and other relevant descriptors. Latency testing will be done with OSLTT (Open Source Latency Tester).
 
 For documentation purposes, this repo will also catalog as much detailed sensor information as possible such as LOD, Polling Rate, etc.
 
@@ -23,6 +23,7 @@ A long-term goal is to develop a custom driver that enables the Joy-Con 2 to fun
 
 ## Goals
 
+- 🔲 Test Input Latency with OSLTT
 - 🔲 Log Joy-Con 2 Mouse Sensor Information (Model, LOD, DPI, etc)
 - 🔲 Dump PID, VID & Other Manufacturing Info
 - 🔲 Dump Handshake / Connection Information (from Nordic 52840 Sniffer)
@@ -32,6 +33,6 @@ A long-term goal is to develop a custom driver that enables the Joy-Con 2 to fun
 
 ## Status
 
-Work in progress. Currently, evaluating the Sensor Lift Off Distance (LOD) has commenced. 
+Work in progress. Currently, evaluating the Sensor Lift Off Distance (LOD) and input latency (with OSLTT) has commenced. 
 
 ---
